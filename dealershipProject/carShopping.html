@@ -2,30 +2,53 @@
 <html>
 <body>
 
-<h2>JavaScript Class Setter</h2>
+<h2>Welcome to my car dealership!</h2>
 
-<p>When using a setter to set a property value, you do not use parantheses.</p>
-<input type="text" id="myCar" value="Car Brand">
-<button onclick="myFunction()">OK</button>
-<p id="demo"></p>
+<h4>Would you like to purchase a car from us today?</h4>
+<button onclick="carRequest">OK</button>
 
 <script>
-class Car {
-  constructor(brand) {
-    this._carname = brand;
+
+class cars {
+  constructor(inventory){
+    this.inventory = Math.random();   
   }
-  set carname(x) {
-    this._carname = x;
+  countInventory(){
+    console.log(`We have ${inventory} cars in our inventory.`);
   }
-  get carname() {
-    return this._carname;
+}// end of cars class
+class myCar extends cars {
+  constructor(make, model, amount){
+    this.make = make;
+    this.model = model;
+    this.amount = amount
   }
+  get amount(){
+    return this.amount = amount
+  }
+  set amount(){
+    this.amount = inventory - hMany;
+  }// end of getters and setters for amount 
+  get model(){
+    return this.model = model
+  }
+  set model(){
+    this.model = wModel // reference input value model
+  }// end of getters and setters for model 
+  get make(){
+    return this.make = make
+  }
+  set make(){
+    this.make = wMake // reference input value make
+    }// end of getters and setters for make 
+  }//end of myCar Class
+
+function carRequest(){
+let wMake = prompt("Please enter the make of the car you'd like.");
+let wModel = prompt("Please enter the model of the vehicle you'd like.");
+let hMany = prompt("Please enter how many vehicles you'd like to buy.");
 }
-function myFunction(){
-mycar = new Car("myCar");
-mycar.carname = getElementById("myCar").innerHTML;
-document.getElementById("demo").innerHTML = mycar.carname;
-}
+
 </script>
 
 </body>
