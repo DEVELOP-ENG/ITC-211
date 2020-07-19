@@ -1,8 +1,8 @@
-  function carRequest(){
+
 let wMake = prompt("Please enter the make of the car you'd like.");
 let wModel = prompt("Please enter the model of the vehicle you'd like.");
 let hMany = prompt("Please enter how many vehicles you'd like to buy.");
-}
+
 
 class cars {
   constructor(inventory){

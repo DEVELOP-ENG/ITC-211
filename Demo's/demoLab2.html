@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Setter</h2>
+
+<p>When using a setter to set a property value, you do not use parantheses.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+let wBrand = prompt("Please enter the make of the car you'd like.");    
+let wModel = prompt("Please enter the model of car you'd like."); 
+let wColor = prompt("Please enter the color of the car you'd like.") 
+let wAmount = prompt("Please enter the amount of cars you'd like.") 
+
+//gets user input
+
+class Car {
+    constructor(brand) {
+      this.carname = brand;
+    }
+        get _carname() {
+            return this.carname;
+    }
+        set _carname(x) {
+            this.carname = x;
+        }
+  }// end of Parent class Car
+
+class Model extends Car {
+    constructor(brand, mod, col, amo ) { //uses constructor
+        super(brand);
+        this.model = mod;
+        this.color = col;
+        this.ammount = amo;
+    } // end of constructor
+        get _model() {
+            return this.model;     
+    }
+        set _model(x) {
+            this.model = x;
+            
+    } //end of setters and getters 
+        get _color() {
+            return this.color;    
+    }
+        set _color(x) {
+            this.color = x;
+    }//end of setters and getters     
+        get _ammount() {
+            return this.ammount;
+
+    }
+        set _ammount(x) {
+            this.ammount = x
+    } //end of setters and getters 
+    
+        calcTax() {
+            var num = parseInt(this.ammount)
+            var taxAmount = num * ( 3000 * .08);
+            return taxAmount;
+        }
+    }
+
+mycar = new Model(wBrand, wModel, wColor, wAmount);
+    document.getElementById("demo").innerHTML = mycar.carname;
+    document.getElementById("demo1").innerHTML = mycar.color; //getter for parent and child class
+
+wAmount = prompt(" Enter new amount of cars:");
+mycar.ammount = wAmount;
+    document.getElementById("demo2").innerHTML = mycar.ammount; //setter for ammount 
+
+    document.getElementById("demo3").innerHTML = mycar.calcTax();
+
+
+
+/*
+mycar = new Car("Ford");
+mycar.carname = "";
+document.getElementById("demo").innerHTML = mycar.carname; 
+*/
+</script>
+
+</body>
+</html>

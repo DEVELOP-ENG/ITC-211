@@ -6,8 +6,13 @@
 
 <h4>Would you like to purchase a car from us today?</h4>
 <button onclick="carRequest()">OK</button>
-  <div> </div>
+  <p>Did you place your request for your car?</p>  <!-- Use the div tag to display message for carRequest -->
+  <p></p>
+  <p></p>
+  <p></p>
 <script>
+
+let messages = []; 
 
 class cars {
   constructor(inventory){
@@ -20,7 +25,17 @@ class cars {
 class myCar extends cars {
   constructor(make, model, amount){
     this.make = make;
-    this.model = model;
+
+    this.model = model; 
+    {
+    get model(){
+      return this.model = model;
+    }
+    set model(){
+      this.model = wModel // reference input value model
+    }// end of getters and setters for model     
+
+
     this.amount = amount
   }
   get amount(){
@@ -29,17 +44,12 @@ class myCar extends cars {
   set amount(){
     this.amount = inventory - hMany;
   }// end of getters and setters for amount 
-  get model(){
-    return this.model = model
-  }
-  set model(){
-    this.model = wModel // reference input value model
-  }// end of getters and setters for model 
+  
   get make(){
     return this.make = make
   }
   set make(){
-    this.make = wMake // reference input value make
+    this.brand = wMake // reference input value make
     }// end of getters and setters for make 
   }//end of myCar Class
 
@@ -47,8 +57,11 @@ function carRequest(){
 let wMake = prompt("Please enter the make of the car you'd like.");
 let wModel = prompt("Please enter the model of the vehicle you'd like.");
 let hMany = prompt("Please enter how many vehicles you'd like to buy.");
-}
+} //prompts users to enter their request of make, model, and amount
 
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed!";
+}
 </script>
 
 </body>
