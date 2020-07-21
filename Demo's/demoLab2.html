@@ -73,7 +73,7 @@ class Model extends Car {
     
         calcTax() {
             var num = parseInt(this.ammount)
-            var taxAmount = num * ( 3000 * .08);
+            var taxAmount = num * ( 10000 * .08);
             return taxAmount;
         }
     }
@@ -85,7 +85,6 @@ mycar = new Model(wBrand, wModel, wColor, wAmount);
 wAmount = prompt(" Enter new amount of cars:");
 mycar.ammount = wAmount;
     document.getElementById("demo2").innerHTML = mycar.ammount; //setter for ammount 
-
     document.getElementById("demo3").innerHTML = mycar.calcTax();
 
 
