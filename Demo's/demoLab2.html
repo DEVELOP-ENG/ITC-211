@@ -73,7 +73,7 @@ class Model extends Car {
     
         calcTax() {
             var num = parseInt(this.ammount)
-            var taxAmount = num * ( 10000 * .08);
+            var taxAmount = num * ( 10000 * .08); // calculates with tax rate * purchase amount by num of cars
             return taxAmount;
         }
     }
