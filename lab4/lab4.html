@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Elements</title>
+    <title>IT121: Lab 4</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lab4.css">
    
 </head>
 <body id="main">
@@ -11,18 +14,20 @@
         <p id="q1">What kind of shoes do you like?</p>
         <p id="p1"></p>        
         <input type="text" id="myText" value="Insert Here">
-        <button onclick="insert()">Insert New Text</button>         
-    <div>
-    <p>Press button to replace the question, and insert new question.</p>
-    <input type="text" id="myQuestion" value="Insert Here">
-    <button onclick="replace()">Replace Question Element</button>
-    </div>
+        <button class="btn btn-primary" onclick="insert()">Insert New Text</button>         
+        
+        <div>
+            <p>Press button to replace the question, and insert new question.</p>
+            <input type="text" id="myQuestion" value="Insert Here">
+            <button class="btn btn-primary" id="qtnBtn" onclick="replace()">Replace Question Element</button>
+        </div>
+    
     <p>Would you like to append?</p>
-    <button onclick="append()">Append Me</button>
-    </Div>
+    <button class="btn btn-primary" id="appendBtn" onclick="append()">Append Me</button>
+    </div>
     </div>  
         <p>Press button to delete the page.</p>
-        <button onclick="move()">Remove All Elements</button>
+        <button class="btn btn-primary" id="removeBtn" onclick="move()">Remove All Elements</button>
     <Div>      
 </body>
 <script src="lab4.js"></script>
