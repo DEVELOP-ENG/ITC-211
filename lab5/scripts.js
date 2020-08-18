@@ -1,13 +1,13 @@
 // STORING DATA
 var noel = {name: "Noel", grade: "101%", age: 24, program: "Year Up - Puget Sound"}
-var adrian = {name: "Adrian ", grade: "21%", age: 22, program: "Year Up - Puget Sound"}
+var adrian = {name: "Adrian", grade: "21%", age: 22, program: "Year Up - Puget Sound"}
 var jenisha = {name: "Jenisha", grade: "85.7%", age: 20, program: "Year Up - Puget Sound"}
 var theresa = {name: "Theresa", grade: "52.9%", age: 23, program: "Year Up - Puget Sound"}
 
-noelJSON = JSON.stringify(noel);
-adrianJSON = JSON.stringify(adrian);
-jenishaJSON = JSON.stringify(Jenisha);
-theresaJSON = JSON.stringify(Theresa);
+var noelJSON = JSON.stringify(noel);
+var adrianJSON = JSON.stringify(adrian);
+var jenishaJSON = JSON.stringify(jenisha);
+var theresaJSON = JSON.stringify(theresa);
 
 localStorage.setItem("noelJSON", noelJSON);
 localStorage.setItem("adrianJSON", adrianJSON);
