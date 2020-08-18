@@ -9,7 +9,7 @@ adrianJSON = JSON.stringify(adrian);
 jenishaJSON = JSON.stringify(Jenisha);
 theresaJSON = JSON.stringify(Theresa);
 
-localStorage.setItem("chrisJSON", noelJSON);
+localStorage.setItem("noelJSON", noelJSON);
 localStorage.setItem("adrianJSON", adrianJSON);
 localStorage.setItem("jenishaJSON", jenishaJSON);
 localStorage.setItem("theresaJSON", theresaJSON);
