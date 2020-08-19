@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Lab 5</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -17,16 +18,20 @@
     <div class="row">
       <div class="col m4"></div>
       <div class="col m6">
-        <p>Name: <span id="name"></span></p>
-        <p>Grade: <span id="grade"></span></p>
-        <p>Age: <span id="age"></span></p>
-        <p>Program: <span id="prog"></span></p>
-        <input type="button" value="Noel" id="noel">
-        <input type="button" value="Adrian" id="adrian">
-        <input type="button" value="Jenisha" id="jenisha">
-        <input type="button" value="Theresa" id="theresa">
+        <h2>Please Enter Personal Info</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="grade" placeholder="Grade">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="prog" placeholder="Program">
+        <input type="button" id="infoBtn" value="Display Personal Info">
       </div>
-      <div class="col m4"></div>
+      <div>
+        <h2>Personal Info</h2>
+        <p id="pName"></p>
+        <p id="pGrade"></p>
+        <p id="pAge"></p>
+        <p id="pProg"></p>
+      </div>
     </div>
   </div>
   <script src="scripts.js"></script>

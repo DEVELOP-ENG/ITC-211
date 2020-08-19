@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Age">
+        </div>
+        <div>
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" placeholder="Grade">
+        </div>
+        <div>
+            <label for="prog">Program</label>
+            <input type="text" id="prog" placeholder="Program">
+        </div>
+        <div>
+            <button id="infoBtn">Display Personal Info</button>
+        </div>
+    </form>        
+        <div>
+            <h2>Personal Info</h2>
+            <p id="pName"></p>
+            <p id="pGrade"></p>
+            <p id="pAge"></p>
+            <p id="pProg"></p>
+          </div>
+
+    
+</body>
+<script>
+
+
+
+  $("#infoBtn").click(function(){    
+
+  let personInfo = {
+  name: document.getElementById('name').value,
+  grade: document.getElementById('grade').value,
+  age: document.getElementById('age').value,
+  program: document.getElementById('prog').value,
+}      
+    var pInfoJSON = JSON.stringify(personInfo);
+
+    localStorage.setItem("pInfoJSON", pInfoJSON);  
+
+    var pInfoText = localStorage.getItem("pInfoJSON");
+
+    var pInfoObj = JSON.parse(pInfoText);
+
+
+  $("#pName").html(pInfoObj.name);
+  $("#pGrade").html(pInfoObj.grade);
+  $("#pAge").html(pInfoObj.age);
+  $("#pProg").html(pInfoObj.program);
+})
+
+</script>
+</html>

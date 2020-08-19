@@ -1,55 +1,25 @@
 // STORING DATA
-var noel = {name: "Noel", grade: "101%", age: 24, program: "Year Up - Puget Sound"}
-var adrian = {name: "Adrian", grade: "21%", age: 22, program: "Year Up - Puget Sound"}
-var jenisha = {name: "Jenisha", grade: "85.7%", age: 20, program: "Year Up - Puget Sound"}
-var theresa = {name: "Theresa", grade: "52.9%", age: 23, program: "Year Up - Puget Sound"}
 
-var noelJSON = JSON.stringify(noel);
-var adrianJSON = JSON.stringify(adrian);
-var jenishaJSON = JSON.stringify(jenisha);
-var theresaJSON = JSON.stringify(theresa);
+//stores data 
+$("#infoBtn").click(function(){    
 
-localStorage.setItem("noelJSON", noelJSON);
-localStorage.setItem("adrianJSON", adrianJSON);
-localStorage.setItem("jenishaJSON", jenishaJSON);
-localStorage.setItem("theresaJSON", theresaJSON);
+  let personInfo = {
+  name: document.getElementById('name').value,
+  grade: document.getElementById('grade').value,
+  age: document.getElementById('age').value,
+  program: document.getElementById('prog').value,
+}      
+    var pInfoJSON = JSON.stringify(personInfo);
 
-// RETRIEVING DATA
-var noelText = localStorage.getItem("noelJSON");
-var adrianText = localStorage.getItem("adrianJSON");
-var jenishaText = localStorage.getItem("jenishaJSON");
-var theresaText = localStorage.getItem("theresaJSON");
+    localStorage.setItem("pInfoJSON", pInfoJSON);  
 
-var noelObj = JSON.parse(noelText);
-var adrianObj = JSON.parse(adrianText);
-var jenishaObj = JSON.parse(jenishaText);
-var theresaObj = JSON.parse(theresaText);
+    var pInfoText = localStorage.getItem("pInfoJSON");
 
-// jQuery noel
-$("#noel").click(function(){
-  $("#name").html(noelObj.name);
-  $("#grade").html(noelObj.grade);
-  $("#age").html(noelObj.age);
-  $("#prog").html(noelObj.program);
-})
-// jQuery adrian
-$("#adrian").click(function(){
-  $("#name").html(adrianObj.name);
-  $("#grade").html(adrianObj.grade);
-  $("#age").html(adrianObj.age);
-  $("#prog").html(adrianObj.program);
-})
-// jQuery jenisha
-$("#jenisha").click(function(){
-  $("#name").html(jenishaObj.name);
-  $("#grade").html(jenishaObj.grade);
-  $("#age").html(jenishaObj.age);
-  $("#prog").html(jenishaObj.program);
-})
-// jQuery theresa
-$("#theresa").click(function(){
-  $("#name").html(theresaObj.name);
-  $("#grade").html(theresaObj.grade);
-  $("#age").html(theresaObj.age);
-  $("#prog").html(theresaObj.program);
+    var pInfoObj = JSON.parse(pInfoText);
+
+
+  $("#pName").html(pInfoObj.name);
+  $("#pGrade").html(pInfoObj.grade);
+  $("#pAge").html(pInfoObj.age);
+  $("#pProg").html(pInfoObj.program);
 })
