@@ -5,7 +5,7 @@ $("#infoBtn").click(function(){
 
   let personInfo = {
   name: document.getElementById('name').value,
-  grade: document.getElementById('grade').value,
+  gpa: document.getElementById('gpa').value,
   age: document.getElementById('age').value,
   program: document.getElementById('prog').value,
 }      
@@ -19,7 +19,7 @@ $("#infoBtn").click(function(){
 
 
   $("#pName").html(pInfoObj.name);
-  $("#pGrade").html(pInfoObj.grade);
+  $("#pGpa").html(pInfoObj.gpa);
   $("#pAge").html(pInfoObj.age);
   $("#pProg").html(pInfoObj.program);
 })
