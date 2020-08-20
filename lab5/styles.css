@@ -1,3 +1,28 @@
 *{
   font-family: 'Baloo Chettan 2', cursive;
 }
+.cover{
+  background-image: url(images/5d1320a89fc68715c2ee2ed2fdb4287f.jpg) ;
+  background-size: auto;
+}
+.header{
+    background-color: rgb(230, 225, 225);
+    border: 1px #000 solid;
+    text-align: center;
+    padding-top: 10px;
+}
+.container {
+  border: 1px #000 solid;
+  background-color: rgb(238, 238, 110);
+  width: auto;
+  height: 140px;
+  text-align: center;
+  }
+
+  .form {
+  background-color: olivedrab;
+  margin: auto;
+  border: 1px #000 solid;
+  height: auto;
+  text-align: center;
+  }
